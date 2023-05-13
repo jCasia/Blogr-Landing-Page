@@ -1,0 +1,16 @@
+.header {
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
+  img {
+    max-width: 90px;
+  }
+}
