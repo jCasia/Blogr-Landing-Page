@@ -1,11 +1,12 @@
 import ButtonPrimary from '../components/ButtonPrimary';
-import Header from '../components/Header';
-import styles from './styles/Hero.module.scss';
+import Nav from '../components/Nav';
 
-const Hero = () => {
+import styles from './styles/Header.module.scss';
+
+const Header = () => {
   return (
-    <section className={styles.hero}>
-      <Header />
+    <header className={styles.header}>
+      <Nav />
       <div className={styles['content-container']}>
         <h1>A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
@@ -14,8 +15,8 @@ const Hero = () => {
           <ButtonPrimary label='Learn More' />
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
-export default Hero;
+export default Header;

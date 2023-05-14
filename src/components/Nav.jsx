@@ -1,17 +1,17 @@
-import styles from './styles/Header.module.scss';
+import styles from './styles/Nav.module.scss';
 
 import hamburger from '../assets/images/icon-hamburger.svg';
 import logo from '../assets/images/logo.svg';
 
-const Header = () => {
+const Nav = () => {
   return (
-    <header className={styles.header}>
+    <nav className={styles['nav-container']}>
       <img src={logo} alt='blogr logo' role='presentation' />
       <button className={styles.btn}>
         <img src={hamburger} alt='' aria-label='button' />
       </button>
-    </header>
+    </nav>
   );
 };
 
-export default Header;
+export default Nav;

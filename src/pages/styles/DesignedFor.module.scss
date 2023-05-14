@@ -1,0 +1,21 @@
+@use '../../styles/settings/container' as container;
+
+.designedFor {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+  padding: 0 27.5px;
+
+  @include container.container;
+
+  h2 {
+    font-size: 2.75rem;
+    color: var(--color-grey-blue);
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

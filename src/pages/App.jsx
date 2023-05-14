@@ -1,10 +1,12 @@
-import Hero from './Hero';
+import ContentMain from './ContentMain';
+import Header from './Header';
 
 function App() {
   return (
-    <div>
-      <Hero />
-    </div>
+    <>
+      <Header />
+      <ContentMain />
+    </>
   );
 }
 
