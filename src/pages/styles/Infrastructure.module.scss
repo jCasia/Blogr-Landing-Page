@@ -1,14 +1,7 @@
 @use '../../styles/settings/container' as container;
 
 .infrastructure {
-  background-image: url('../../assets/images/bg-pattern-circles.svg'),
-    linear-gradient(var(--color-grey-blue), var(--color-dark-grey-blue));
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -16,11 +9,35 @@
   text-align: center;
 
   color: var(--color-white);
+  padding: 0 33px 100px 33px;
 
   @include container.container;
 
-  img {
+  .background {
+    position: absolute;
+    overflow: hidden;
+
+    background-image: linear-gradient(
+      var(--color-grey-blue),
+      var(--color-dark-grey-blue)
+    );
+
+    border-radius: 0 100px;
+    inset: 22.5% 0 0;
+    z-index: -99;
+  }
+
+  .phone {
     max-width: 100%;
+  }
+
+  .circle {
+    position: absolute;
+    transform: translateY(-100px);
+    top: -100px;
+    left: -80px;
+    max-width: 140%;
+    z-index: -66;
   }
 
   .context {
@@ -29,11 +46,12 @@
     gap: 20px;
 
     h2 {
-      font-size: 3.5rem;
+      font-size: 3.75rem;
     }
 
     p {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
+      line-height: 1.6;
       font-weight: 300;
     }
   }

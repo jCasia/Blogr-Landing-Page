@@ -1,4 +1,5 @@
 import ContentMain from './ContentMain';
+import Footer from './Footer';
 import Header from './Header';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Header />
       <ContentMain />
+      <Footer />
     </>
   );
 }

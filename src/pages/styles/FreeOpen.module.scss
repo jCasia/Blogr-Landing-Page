@@ -1,20 +1,15 @@
 @use '../../styles/settings/container' as container;
 
-.designedFor {
+.freeOpen {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  gap: 30px;
 
   padding: 0 27.5px;
 
   @include container.container;
-
-  h2 {
-    font-size: 2.75rem;
-    color: var(--color-very-dark-blue);
-  }
 
   img {
     max-width: 100%;
