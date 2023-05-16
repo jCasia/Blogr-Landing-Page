@@ -1,17 +1,20 @@
 @use '../../styles/settings/container' as container;
+@use '../../styles/settings/media' as mediaQuery;
 
 .infrastructure {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include container.flex-column;
   text-align: center;
 
   color: var(--color-white);
   padding: 0 33px 100px 33px;
 
   @include container.container;
+
+  @include mediaQuery.responsive(large-mobile) {
+    padding: 0 50px 100px 50px;
+  }
 
   .background {
     position: absolute;
@@ -23,12 +26,23 @@
     );
 
     border-radius: 0 100px;
-    inset: 22.5% 0 0;
+    inset: 19% 0 0;
     z-index: -99;
+
+    @include mediaQuery.responsive(medium-mobile) {
+      inset: 22.5% 0 0;
+    }
   }
 
   .phone {
     max-width: 100%;
+
+    @include mediaQuery.responsive(large-mobile) {
+      max-width: 85%;
+    }
+    @include mediaQuery.responsive(small-tablet) {
+      max-width: 65%;
+    }
   }
 
   .circle {
@@ -53,6 +67,10 @@
       font-size: 1.6rem;
       line-height: 1.6;
       font-weight: 300;
+
+      @include mediaQuery.responsive(large-mobile) {
+        font-size: 1.85rem;
+      }
     }
   }
 }

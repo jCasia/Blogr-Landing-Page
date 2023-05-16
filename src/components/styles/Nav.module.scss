@@ -1,3 +1,5 @@
+@use '../../styles/settings/media' as mediaQuery;
+
 .nav-container {
   background-color: transparent;
 
@@ -5,12 +7,23 @@
   align-items: center;
   justify-content: space-between;
 
+  @include mediaQuery.responsive(small-tablet) {
+    padding: 0 10px;
+  }
+
   button {
     background-color: transparent;
     border: none;
+    @include mediaQuery.responsive(small-laptop) {
+      display: none;
+    }
   }
 
   img {
     max-width: 90px;
+
+    @include mediaQuery.responsive(small-tablet) {
+      max-width: 100%;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import styles from './styles/PrimaryButton.module.scss';
 
-const ButtonPrimary = (prop) => {
-  return <button className={styles.btn}>{prop.label}</button>;
+const ButtonPrimary = ({ label, customClass = '' }) => {
+  return <button className={`${styles.btn} ${customClass}`}>{label}</button>;
 };
 
 export default ButtonPrimary;

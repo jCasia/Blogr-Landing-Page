@@ -12,7 +12,7 @@ const Header = () => {
         <p>Grow your audience and build your online brand</p>
         <div className={styles['btn-container']}>
           <ButtonPrimary label='Start for Free' />
-          <ButtonPrimary label='Learn More' />
+          <ButtonPrimary label='Learn More' customClass={styles.learnBtn} />
         </div>
       </div>
     </header>

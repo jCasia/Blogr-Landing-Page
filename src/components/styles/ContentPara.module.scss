@@ -1,3 +1,5 @@
+@use '../../styles/settings/media' as mediaQuery;
+
 .contentPar-container {
   display: flex;
   flex-direction: column;
@@ -8,11 +10,19 @@
   h3 {
     font-size: 2.75rem;
     color: var(--color-dark-grey-blue);
+
+    @include mediaQuery.responsive(small-tablet) {
+      font-size: 3rem;
+    }
   }
 
   p {
     font-size: 1.65rem;
     color: var(--color-very-dark-grayish-blue);
     line-height: 1.6;
+
+    @include mediaQuery.responsive(small-tablet) {
+      font-size: 1.85rem;
+    }
   }
 }

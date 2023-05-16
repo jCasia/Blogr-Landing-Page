@@ -1,3 +1,74 @@
+@use '../../styles/settings/container' as container;
+@use '../../styles/settings/media' as mediaQuery;
+
 .footer {
   background-color: var(--color-very-dark-blue-2);
+  border-top-right-radius: 100px;
+  padding: 70px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @include container.flex-column;
+  gap: 50px;
+
+  @include mediaQuery.responsive(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'logo logo logo'
+      'link1 link2 link3';
+
+    align-items: start;
+    padding: 70px 50px;
+  }
+
+  .logo {
+    @include mediaQuery.responsive(small-tablet) {
+      grid-area: logo;
+      justify-self: center;
+    }
+  }
+
+  .links-container {
+    @include container.flex-column;
+    gap: 25px;
+
+    @include mediaQuery.responsive(small-tablet) {
+      &:first-of-type {
+        grid-area: link1;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: link2;
+      }
+      &:nth-of-type(3) {
+        grid-area: link3;
+      }
+    }
+  }
+
+  .sublinks {
+    @include container.flex-column;
+    gap: 7.5px;
+  }
+
+  h4 {
+    color: var(--color-white);
+    font-size: 1.85rem;
+  }
+
+  a:link,
+  a:visited {
+    color: var(--color-grayish-blue);
+    font-size: 1.85rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    transition: all 0.4s;
+  }
+
+  a:hover,
+  a:active {
+    border-bottom: 1px solid var(--color-grayish-blue);
+  }
 }

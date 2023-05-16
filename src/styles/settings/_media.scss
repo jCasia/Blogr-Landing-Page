@@ -1,0 +1,22 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == medium-mobile {
+    @media only screen and (min-width: 23.4em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large-mobile {
+    @media only screen and (min-width: 31.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-tablet {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-laptop {
+    @media only screen and (min-width: 55em) {
+      @content;
+    }
+  }
+}

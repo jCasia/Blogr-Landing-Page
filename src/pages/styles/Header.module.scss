@@ -1,4 +1,5 @@
 @use '../../styles/settings/container' as container;
+@use '../../styles/settings/media' as mediaQuery;
 
 .header {
   max-width: 100%;
@@ -18,18 +19,18 @@
 }
 
 .content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include container.flex-column;
   gap: 17.5px;
-
   text-align: center;
 
   h1 {
     color: var(--color-white);
     font-weight: 500;
     font-size: 3.5rem;
+
+    @include mediaQuery.responsive(small-tablet) {
+      font-size: 4.5rem;
+    }
   }
 
   p {
@@ -37,10 +38,24 @@
     color: var(--color-white);
     font-weight: 300;
     margin-bottom: 25px;
+
+    @include mediaQuery.responsive(small-tablet) {
+      font-size: 2rem;
+    }
   }
 }
 
 .btn-container {
   display: flex;
   gap: 15px;
+
+  .learnBtn {
+    background-color: transparent;
+    color: var(--color-white);
+  }
+
+  .learnBtn:hover {
+    background-color: var(--color-white);
+    color: var(--color-light-red);
+  }
 }
