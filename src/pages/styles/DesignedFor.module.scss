@@ -2,10 +2,8 @@
 @use '../../styles/settings/media' as mediaQuery;
 
 .designedFor {
-  display: flex;
-  flex-direction: column;
+  @include container.flex-column;
   gap: 30px;
-  align-items: center;
   text-align: center;
 
   padding: 0 27.5px;
@@ -14,6 +12,32 @@
 
   @include mediaQuery.responsive(small-tablet) {
     padding: 0 60px;
+    gap: 100px;
+  }
+
+  @include mediaQuery.responsive(small-laptop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    position: relative;
+  }
+
+  @include mediaQuery.responsive(laptop) {
+    padding: 0 150px;
+  }
+
+  .content {
+    @include container.flex-column;
+    gap: 30px;
+
+    @include mediaQuery.responsive(small-laptop) {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    @include mediaQuery.responsive(laptop) {
+      gap: 70px;
+    }
   }
 
   h2 {
@@ -23,9 +47,27 @@
     @include mediaQuery.responsive(small-tablet) {
       font-size: 3.25rem;
     }
+    @include mediaQuery.responsive(small-laptop) {
+      grid-column: 1/ -1;
+      grid-row: 1 /2;
+      font-size: 3.5rem;
+    }
   }
 
-  img {
+  .imageMobile {
     max-width: 100%;
+
+    @include mediaQuery.responsive(small-laptop) {
+      display: none;
+    }
+  }
+
+  .imageDesktop {
+    display: none;
+
+    @include mediaQuery.responsive(small-laptop) {
+      display: inline-block;
+      max-width: 150%;
+    }
   }
 }

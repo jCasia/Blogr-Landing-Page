@@ -3,9 +3,9 @@
 
 .header {
   max-width: 100%;
-  height: 77vh;
+
   border-bottom-left-radius: 100px;
-  padding: 50px 30px;
+  padding: 50px 30px 160px 30px;
 
   background-image: url('../../assets/images/bg-pattern-intro-mobile.svg'),
     linear-gradient(var(--color-light-orange-red), var(--color-dark-orange-red));
@@ -14,8 +14,18 @@
 
   display: grid;
   grid-template-rows: auto 1fr;
+  gap: 100px;
 
   @include container.container;
+
+  @include mediaQuery.responsive(small-laptop) {
+    background-image: url('../../assets/images/bg-pattern-intro-desktop.svg'),
+      linear-gradient(
+        var(--color-light-orange-red),
+        var(--color-dark-orange-red)
+      );
+    background-position: 25% 51%;
+  }
 }
 
 .content-container {
@@ -31,6 +41,10 @@
     @include mediaQuery.responsive(small-tablet) {
       font-size: 4.5rem;
     }
+
+    @include mediaQuery.responsive(laptop) {
+      font-size: 6.25rem;
+    }
   }
 
   p {
@@ -41,6 +55,10 @@
 
     @include mediaQuery.responsive(small-tablet) {
       font-size: 2rem;
+    }
+
+    @include mediaQuery.responsive(laptop) {
+      font-size: 2.25rem;
     }
   }
 }

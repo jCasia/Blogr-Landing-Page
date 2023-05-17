@@ -3,17 +3,22 @@
 
 .infrastructure {
   position: relative;
+  color: var(--color-white);
 
   @include container.flex-column;
   text-align: center;
-
-  color: var(--color-white);
   padding: 0 33px 100px 33px;
 
   @include container.container;
 
   @include mediaQuery.responsive(large-mobile) {
     padding: 0 50px 100px 50px;
+  }
+
+  @include mediaQuery.responsive(small-laptop) {
+    flex-direction: row;
+    padding: 25px 75px;
+    text-align: left;
   }
 
   .background {
@@ -32,6 +37,10 @@
     @include mediaQuery.responsive(medium-mobile) {
       inset: 22.5% 0 0;
     }
+
+    @include mediaQuery.responsive(small-laptop) {
+      inset: 18% 0;
+    }
   }
 
   .phone {
@@ -41,17 +50,19 @@
       max-width: 85%;
     }
     @include mediaQuery.responsive(small-tablet) {
-      max-width: 65%;
+      max-width: 60%;
     }
   }
 
   .circle {
     position: absolute;
-    transform: translateY(-100px);
-    top: -100px;
-    left: -80px;
+    transform: translate(-265px, -230px);
     max-width: 140%;
     z-index: -66;
+
+    @include mediaQuery.responsive(small-laptop) {
+      transform: translate(-250px, -550px);
+    }
   }
 
   .context {
@@ -59,17 +70,40 @@
     flex-direction: column;
     gap: 20px;
 
+    @include mediaQuery.responsive(small-laptop) {
+      padding: 0 45px;
+    }
+
+    @include mediaQuery.responsive(laptop) {
+      padding: 0 70px;
+    }
+
     h2 {
       font-size: 3.75rem;
+
+      @include mediaQuery.responsive(small-laptop) {
+        font-size: 3.2rem;
+      }
+
+      @include mediaQuery.responsive(laptop) {
+        font-size: 4.2rem;
+      }
     }
 
     p {
       font-size: 1.6rem;
       line-height: 1.6;
-      font-weight: 300;
+      font-weight: 200;
 
       @include mediaQuery.responsive(large-mobile) {
         font-size: 1.85rem;
+      }
+      @include mediaQuery.responsive(small-laptop) {
+        font-size: 1.65rem;
+      }
+
+      @include mediaQuery.responsive(laptop) {
+        font-size: 1.9rem;
       }
     }
   }

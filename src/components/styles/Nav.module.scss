@@ -14,7 +14,7 @@
   button {
     background-color: transparent;
     border: none;
-    @include mediaQuery.responsive(small-laptop) {
+    @include mediaQuery.responsive(tablet) {
       display: none;
     }
   }

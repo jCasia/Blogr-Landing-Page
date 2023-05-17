@@ -2,9 +2,7 @@
 @use '../../styles/settings/media' as mediaQuery;
 
 .freeOpen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include container.flex-column;
   align-items: center;
   gap: 30px;
 
@@ -15,8 +13,33 @@
   @include mediaQuery.responsive(small-tablet) {
     padding: 0 60px;
   }
+  @include mediaQuery.responsive(laptop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  img {
+  .content {
+    @include container.flex-column;
+    gap: 30px;
+
+    @include mediaQuery.responsive(laptop) {
+      gap: 70px;
+    }
+  }
+
+  .imageMobile {
     max-width: 100%;
+
+    @include mediaQuery.responsive(small-laptop) {
+      display: none;
+    }
+  }
+
+  .imageDesktop {
+    display: none;
+    @include mediaQuery.responsive(small-laptop) {
+      display: inline-block;
+      max-width: 100%;
+    }
   }
 }

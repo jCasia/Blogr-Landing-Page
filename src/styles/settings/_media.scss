@@ -14,8 +14,19 @@
       @content;
     }
   }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 51em) {
+      @content;
+    }
+  }
   @if $breakpoint == small-laptop {
-    @media only screen and (min-width: 55em) {
+    @media only screen and (min-width: 58em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (min-width: 70em) {
       @content;
     }
   }
