@@ -1,11 +1,11 @@
 @use '../../styles/settings/media' as mediaQuery;
 
 .nav-container {
-  background-color: transparent;
-
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   @include mediaQuery.responsive(small-tablet) {
     padding: 0 10px;
@@ -14,6 +14,7 @@
   button {
     background-color: transparent;
     border: none;
+
     @include mediaQuery.responsive(tablet) {
       display: none;
     }

@@ -1,0 +1,48 @@
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btndrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: center;
+
+  border: none;
+  background-color: transparent;
+}
+
+h4 {
+  font-size: 2.1rem;
+  color: var(--color-grey-blue);
+}
+
+.sublinks {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  background-color: rgba(200, 200, 203, 0.3);
+  border-radius: 7.5px;
+
+  ///transition
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.75s ease-out;
+
+  a {
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: var(--color-very-dark-grayish-blue);
+    font-weight: 600;
+  }
+}
+
+.expand {
+  max-height: 230px;
+  padding: 20px;
+}
