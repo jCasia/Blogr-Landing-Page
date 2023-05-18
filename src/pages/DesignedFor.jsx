@@ -1,18 +1,18 @@
 import styles from './styles/DesignedFor.module.scss';
 import imageMobile from '../assets/images/illustration-editor-mobile.svg';
-// import imageDesktop from '../assets/images/illustration-editor-desktop.svg';
+import imageDesktop from '../assets/images/illustration-editor-desktop.svg';
 import ContentPara from '../components/ContentPara';
 import { dataDesignFor } from '../../data';
 
 const DesignedFor = () => {
   return (
     <section className={styles.designedFor}>
-      {/* <img
+      <img
         src={imageDesktop}
         alt='editor illustration'
         role='presentation'
         className={styles.imageDesktop}
-      /> */}
+      />
       <h2>Designed for the future</h2>
       <img
         src={imageMobile}

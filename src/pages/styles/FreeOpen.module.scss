@@ -6,21 +6,30 @@
   align-items: center;
   gap: 30px;
 
-  padding: 0 27.5px;
+  padding: 90px 27.5px;
 
   @include container.container;
 
   @include mediaQuery.responsive(small-tablet) {
-    padding: 0 60px;
+    padding: 90px 60px;
   }
-  @include mediaQuery.responsive(laptop) {
+  @include mediaQuery.responsive(small-laptop) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    position: relative;
+  }
+  @include mediaQuery.responsive(laptop) {
+    padding: 100px 100px 200px 100px;
   }
 
   .content {
     @include container.flex-column;
     gap: 30px;
+
+    @include mediaQuery.responsive(small-laptop) {
+      grid-column: 2/3;
+    }
 
     @include mediaQuery.responsive(laptop) {
       gap: 70px;
@@ -37,8 +46,19 @@
 
   .imageDesktop {
     display: none;
+
     @include mediaQuery.responsive(small-laptop) {
-      display: inline-block;
+      display: block;
+      max-width: 100%;
+    }
+    @include mediaQuery.responsive(laptop) {
+      position: absolute;
+      top: -50px;
+      left: -220px;
+      max-width: 775px;
+    }
+    @include mediaQuery.responsive(large-laptop) {
+      position: static;
       max-width: 100%;
     }
   }

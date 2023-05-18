@@ -6,13 +6,12 @@
   gap: 30px;
   text-align: center;
 
-  padding: 0 27.5px;
+  padding: 90px 27.5px;
 
   @include container.container;
 
   @include mediaQuery.responsive(small-tablet) {
-    padding: 0 60px;
-    gap: 100px;
+    padding: 90px 60px;
   }
 
   @include mediaQuery.responsive(small-laptop) {
@@ -20,10 +19,13 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
     position: relative;
+    gap: 100px;
+
+    position: relative;
   }
 
   @include mediaQuery.responsive(laptop) {
-    padding: 0 150px;
+    padding: 180px 150px;
   }
 
   .content {
@@ -66,8 +68,19 @@
     display: none;
 
     @include mediaQuery.responsive(small-laptop) {
-      display: inline-block;
-      max-width: 150%;
+      display: block;
+      max-width: 100%;
+    }
+    @include mediaQuery.responsive(laptop) {
+      position: absolute;
+      top: 80px;
+      right: -200px;
+      max-width: 775px;
+    }
+
+    @include mediaQuery.responsive(large-laptop) {
+      position: static;
+      max-width: 100%;
     }
   }
 }
