@@ -20,9 +20,9 @@ const Footer = () => {
               {links.map((link) => {
                 const { id, label, url } = link;
                 return (
-                  <a href={url} key={id}>
-                    {label}
-                  </a>
+                  <li key={id}>
+                    <a href={url}>{label}</a>
+                  </li>
                 );
               })}
             </div>

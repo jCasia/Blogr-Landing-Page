@@ -34,6 +34,9 @@ h4 {
   overflow: hidden;
   transition: all 0.75s ease-out;
 
+  li {
+    list-style: none;
+  }
   a {
     text-decoration: none;
     font-size: 1.75rem;

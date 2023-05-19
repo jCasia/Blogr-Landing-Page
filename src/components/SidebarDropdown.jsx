@@ -1,8 +1,8 @@
-import styles from './styles/SingleDrop.module.scss';
+import styles from './styles/SidebarDropdown.module.scss';
 import { useState } from 'react';
 import arrow from '../assets/images/icon-arrow-dark.svg';
 
-const SingleDrop = ({ pageId, page, links }) => {
+const SidebarDropdown = ({ pageId, page, links }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownHandler = () => {
@@ -13,10 +13,15 @@ const SingleDrop = ({ pageId, page, links }) => {
     <div key={pageId} className={styles['links-container']}>
       <button className={styles.btndrop} onClick={dropdownHandler}>
         <h4>{page}</h4>
-        <img src={arrow} alt='dropdown' className={styles['img-dropdown']} />
+
+        <img
+          src={arrow}
+          alt='dropdown'
+          style={{ transform: isDropdownOpen && 'rotate(180deg)' }}
+        />
       </button>
 
-      <div
+      <ul
         className={
           isDropdownOpen
             ? `${styles.sublinks} ${styles.expand}`
@@ -26,14 +31,14 @@ const SingleDrop = ({ pageId, page, links }) => {
         {links.map((link) => {
           const { id, label, url } = link;
           return (
-            <a href={url} key={id}>
-              {label}
-            </a>
+            <li key={id}>
+              <a href={url}>{label}</a>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };
 
-export default SingleDrop;
+export default SidebarDropdown;

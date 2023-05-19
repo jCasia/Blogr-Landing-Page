@@ -1,11 +1,10 @@
 @use '../../styles/settings/media' as mediaQuery;
 
 .btn {
-  border: none;
   background-color: var(--color-white);
   cursor: pointer;
 
-  outline: 1px solid var(--color-white);
+  border: 1px solid var(--color-white);
   padding: 12.5px 22.5px;
   font-size: 1.3rem;
   font-family: var(--font-ubuntu);
@@ -23,9 +22,13 @@
     font-size: 2rem;
   }
 
+  @include mediaQuery.responsive(tablet) {
+    font-size: 1.75rem;
+  }
+
   &:hover {
     background-color: var(--color-very-light-red);
-    outline: 1px solid var(--color-very-light-red);
+    border: 1px solid var(--color-very-light-red);
     color: var(--color-white);
   }
 }

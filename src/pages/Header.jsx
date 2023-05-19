@@ -1,6 +1,5 @@
 import ButtonPrimary from '../components/ButtonPrimary';
 import Nav from '../components/Nav';
-
 import styles from './styles/Header.module.scss';
 
 const Header = () => {

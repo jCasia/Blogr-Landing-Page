@@ -11,12 +11,50 @@
     padding: 0 10px;
   }
 
-  button {
+  @include mediaQuery.responsive(laptop) {
+    padding: 0 115px;
+  }
+
+  .mobilebtn {
     background-color: transparent;
     border: none;
 
     @include mediaQuery.responsive(tablet) {
       display: none;
+    }
+  }
+
+  .desktopbtnContainer {
+    display: none;
+
+    @include mediaQuery.responsive(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+
+  .links-container {
+    display: flex;
+    gap: 50px;
+  }
+
+  .login {
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    transition: all 0.4s;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  .signbtn {
+    @include mediaQuery.responsive(tablet) {
+      padding: 10px 35px;
     }
   }
 

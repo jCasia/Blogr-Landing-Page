@@ -1,0 +1,31 @@
+@use '../../styles/settings/media' as mediaQuery;
+
+.nav-links {
+  display: none;
+
+  @include mediaQuery.responsive(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-ubuntu);
+    transition: all 0.4s;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  img {
+    margin-left: 7.5px;
+  }
+}

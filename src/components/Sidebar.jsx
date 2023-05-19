@@ -2,7 +2,7 @@ import styles from './styles/Sidebar.module.scss';
 import PrimaryButton from '../components/ButtonPrimary';
 import { dataLinks } from '../../data';
 import { useGlobalContext } from '../../Context';
-import SingleDrop from './SingleDrop';
+import SidebarDropdown from './SidebarDropdown';
 
 const Sidebar = () => {
   const { isSidebarOpen } = useGlobalContext();
@@ -14,7 +14,7 @@ const Sidebar = () => {
       }
     >
       {dataLinks.map((item) => {
-        return <SingleDrop {...item} key={item.pageId} />;
+        return <SidebarDropdown {...item} key={item.pageId} />;
       })}
       <hr />
       <a href='#' className={styles.login}>

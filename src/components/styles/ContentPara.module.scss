@@ -28,6 +28,7 @@
     font-size: 1.65rem;
     color: var(--color-very-dark-grayish-blue);
     line-height: 1.6;
+    font-family: var(--font-ubuntu);
 
     @include mediaQuery.responsive(small-tablet) {
       font-size: 1.85rem;

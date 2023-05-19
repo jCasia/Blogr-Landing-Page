@@ -15,7 +15,7 @@ export const dataDesignFor = [
 
 export const infraData = {
   heading: 'State of the Art Infrastructure',
-  text: 'With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.This ensures your site will load instantly, no matter where your reader are, keeping your site competitive.',
+  text: 'With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your reader are, keeping your site competitive.',
 };
 
 export const dataFreeOpen = [

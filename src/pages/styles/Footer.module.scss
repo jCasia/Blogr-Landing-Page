@@ -70,15 +70,15 @@
 
   .sublinks {
     @include container.flex-column;
-    gap: 7.5px;
+    gap: 12.5px;
 
     @include mediaQuery.responsive(small-laptop) {
       align-items: start;
     }
+  }
 
-    @include mediaQuery.responsive(laptop) {
-      gap: 12.5px;
-    }
+  li {
+    list-style: none;
   }
 
   h4 {
@@ -92,7 +92,7 @@
     font-size: 1.85rem;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-
+    font-family: var(--font-ubuntu);
     transition: all 0.4s;
   }
 
