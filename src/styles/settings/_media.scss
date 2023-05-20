@@ -37,3 +37,11 @@
     }
   }
 }
+
+@mixin responsiveHeight($breakpoint) {
+  @if $breakpoint == heightbreak {
+    @media only screen and (min-height: 47.5em) {
+      @content;
+    }
+  }
+}

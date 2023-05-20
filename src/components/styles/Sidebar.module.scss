@@ -4,9 +4,13 @@
 .sidebar {
   background-color: var(--color-white);
   position: absolute;
-  top: 15%;
+  top: 18%;
   left: 9%;
   width: 85%;
+
+  @include mediaQuery.responsiveHeight(heightbreak) {
+    top: 12%;
+  }
 
   @include container.flex-column;
   gap: 25px;

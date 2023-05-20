@@ -5,7 +5,7 @@ import { useGlobalContext } from '../../Context';
 const NavLinks = ({ page, links, pageId }) => {
   const { toggleSingle, activeId } = useGlobalContext();
 
-  const isActive = pageId === activeId; //true or false.
+  const isActive = pageId === activeId;
 
   return (
     <div className={styles['nav-links']}>

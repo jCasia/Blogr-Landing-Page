@@ -5,13 +5,12 @@ import { useGlobalContext } from '../../Context';
 const SidebarDropdown = ({ page, links, pageId }) => {
   const { toggleSingle, activeId } = useGlobalContext();
 
-  const isActive = pageId === activeId; //true or false.
+  const isActive = pageId === activeId;
 
   return (
     <div className={styles['links-container']}>
       <button className={styles.btndrop} onClick={() => toggleSingle(pageId)}>
         <h4>{page}</h4>
-
         <img
           src={arrow}
           alt='dropdown'
