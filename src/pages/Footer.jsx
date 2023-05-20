@@ -5,13 +5,7 @@ import logo from '../assets/images/logo.svg';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <img
-        src={logo}
-        alt='blogr logo'
-        aria-label='blogr-logo'
-        role='presentation'
-        className={styles.logo}
-      />
+      <img src={logo} alt='blogr logo' className={styles.logo} />
       {dataLinks.map((item) => {
         const { links, pageId, page } = item;
         return (

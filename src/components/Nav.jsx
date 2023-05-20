@@ -16,12 +16,7 @@ const Nav = () => {
       {/* desktop */}
       <div className={styles['nav-container']}>
         <div className={styles['links-container']}>
-          <img
-            src={logo}
-            alt='blogr logo'
-            role='presentation'
-            aria-label='blogr-logo'
-          />
+          <img src={logo} alt='blogr logo' />
           {dataLinks.map((item) => {
             return <NavLinks {...item} key={item.pageId} />;
           })}

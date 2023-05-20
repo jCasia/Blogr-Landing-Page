@@ -10,15 +10,11 @@ const FreeOpen = () => {
       <img
         src={laptopImageDesktop}
         alt='illustration laptop'
-        role='presentation'
-        aria-label='illustration laptop'
         className={styles.imageDesktop}
       />
       <img
         src={laptopImageMobile}
         alt='illustration mobile'
-        aria-label='illustration mobile'
-        role='presentation'
         className={styles.imageMobile}
       />
       <div className={styles.content}>
