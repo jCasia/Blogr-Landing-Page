@@ -2,7 +2,7 @@ import styles from './styles/SidebarDropdown.module.scss';
 import { useState } from 'react';
 import arrow from '../assets/images/icon-arrow-dark.svg';
 
-const SidebarDropdown = ({ pageId, page, links }) => {
+const SidebarDropdown = ({ page, links }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownHandler = () => {
@@ -10,7 +10,7 @@ const SidebarDropdown = ({ pageId, page, links }) => {
   };
 
   return (
-    <div key={pageId} className={styles['links-container']}>
+    <div className={styles['links-container']}>
       <button className={styles.btndrop} onClick={dropdownHandler}>
         <h4>{page}</h4>
 

@@ -6,6 +6,7 @@ import close from '../assets/images/icon-close.svg';
 import logo from '../assets/images/logo.svg';
 import NavLinks from './NavLinks';
 import ButtonPrimary from './ButtonPrimary';
+import { dataLinks } from '../../data';
 
 const Nav = () => {
   const { toggleSidebar, isSidebarOpen } = useGlobalContext();
@@ -16,7 +17,9 @@ const Nav = () => {
       <div className={styles['nav-container']}>
         <div className={styles['links-container']}>
           <img src={logo} alt='blogr logo' role='presentation' />
-          <NavLinks />
+          {dataLinks.map((item) => {
+            return <NavLinks {...item} key={item.pageId} />;
+          })}
         </div>
         <div className={styles.desktopbtnContainer}>
           <a href='#' className={styles.login}>

@@ -16,7 +16,7 @@ const Footer = () => {
         return (
           <div key={pageId} className={styles['links-container']}>
             <h4>{page}</h4>
-            <div className={styles.sublinks}>
+            <ul className={styles.sublinks}>
               {links.map((link) => {
                 const { id, label, url } = link;
                 return (
@@ -25,7 +25,7 @@ const Footer = () => {
                   </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         );
       })}

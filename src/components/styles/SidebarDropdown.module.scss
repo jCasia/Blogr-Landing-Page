@@ -34,6 +34,11 @@ h4 {
   overflow: hidden;
   transition: all 0.75s ease-out;
 
+  &.expand {
+    max-height: 230px;
+    padding: 20px;
+  }
+
   li {
     list-style: none;
   }
@@ -43,9 +48,4 @@ h4 {
     color: var(--color-very-dark-grayish-blue);
     font-weight: 600;
   }
-}
-
-.expand {
-  max-height: 230px;
-  padding: 20px;
 }
