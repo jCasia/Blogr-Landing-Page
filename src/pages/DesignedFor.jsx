@@ -11,12 +11,14 @@ const DesignedFor = () => {
         src={imageDesktop}
         alt='editor illustration'
         role='presentation'
+        aria-label='editor illustration'
         className={styles.imageDesktop}
       />
       <h2>Designed for the future</h2>
       <img
         src={imageMobile}
-        alt='editor illuestartion'
+        alt='editor illustration'
+        aria-label='editor illustration'
         role='presentation'
         className={styles.imageMobile}
       />

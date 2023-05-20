@@ -8,6 +8,7 @@ const Footer = () => {
       <img
         src={logo}
         alt='blogr logo'
+        aria-label='blogr-logo'
         role='presentation'
         className={styles.logo}
       />

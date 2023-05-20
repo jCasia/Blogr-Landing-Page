@@ -17,8 +17,9 @@ const Infrastructure = () => {
       </div>
       <img
         src={imagePhone}
-        alt='two phones'
+        alt='illustration two phones'
         role='presentation'
+        aria-label='illustration two phones'
         className={styles.phone}
       />
       <div className={styles.context}>
