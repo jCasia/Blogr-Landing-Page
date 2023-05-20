@@ -1,31 +1,27 @@
 import styles from './styles/SidebarDropdown.module.scss';
-import { useState } from 'react';
 import arrow from '../assets/images/icon-arrow-dark.svg';
+import { useGlobalContext } from '../../Context';
 
-const SidebarDropdown = ({ page, links }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const SidebarDropdown = ({ page, links, pageId }) => {
+  const { toggleSingle, activeId } = useGlobalContext();
 
-  const dropdownHandler = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  const isActive = pageId === activeId; //true or false.
 
   return (
     <div className={styles['links-container']}>
-      <button className={styles.btndrop} onClick={dropdownHandler}>
+      <button className={styles.btndrop} onClick={() => toggleSingle(pageId)}>
         <h4>{page}</h4>
 
         <img
           src={arrow}
           alt='dropdown'
-          style={{ transform: isDropdownOpen && 'rotate(180deg)' }}
+          style={{ transform: isActive && 'rotate(180deg)' }}
         />
       </button>
 
       <ul
         className={
-          isDropdownOpen
-            ? `${styles.sublinks} ${styles.expand}`
-            : styles.sublinks
+          isActive ? `${styles.sublinks} ${styles.expand}` : styles.sublinks
         }
       >
         {links.map((link) => {

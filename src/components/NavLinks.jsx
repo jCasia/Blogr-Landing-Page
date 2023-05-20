@@ -1,28 +1,29 @@
 import styles from './styles/NavLinks.module.scss';
 import arrowDown from '../assets/images/icon-arrow-light.svg';
-import { useState } from 'react';
+import { useGlobalContext } from '../../Context';
 
-const NavLinks = ({ page, links }) => {
-  const [isLinksDropdownOpen, setIsLinksDropdownOpen] = useState(false);
+const NavLinks = ({ page, links, pageId }) => {
+  const { toggleSingle, activeId } = useGlobalContext();
 
-  const linksDropdownHandler = () => {
-    setIsLinksDropdownOpen(!isLinksDropdownOpen);
-  };
+  const isActive = pageId === activeId; //true or false.
 
   return (
     <div className={styles['nav-links']}>
       <div className={styles.dropdownContainer}>
-        <button className={styles['nav-link']} onClick={linksDropdownHandler}>
+        <button
+          className={styles['nav-link']}
+          onClick={() => toggleSingle(pageId)}
+        >
           {page}
           <img
             src={arrowDown}
             alt='down arrow'
-            className={isLinksDropdownOpen ? styles.rotate : styles.rotateBack}
+            className={isActive ? styles.rotate : styles.rotateBack}
           />
         </button>
         <ul
           className={
-            isLinksDropdownOpen
+            isActive
               ? `${styles.linkListsContainer} ${styles.toggleOpen}`
               : styles.linkListsContainer
           }
