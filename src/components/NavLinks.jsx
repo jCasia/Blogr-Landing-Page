@@ -13,6 +13,7 @@ const NavLinks = ({ page, links, pageId }) => {
         <button
           className={styles['nav-link']}
           onClick={() => toggleSingle(pageId)}
+          type='button'
         >
           {page}
           <img

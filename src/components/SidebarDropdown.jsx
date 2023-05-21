@@ -9,7 +9,11 @@ const SidebarDropdown = ({ page, links, pageId }) => {
 
   return (
     <div className={styles['links-container']}>
-      <button className={styles.btndrop} onClick={() => toggleSingle(pageId)}>
+      <button
+        className={styles.btndrop}
+        onClick={() => toggleSingle(pageId)}
+        type='button'
+      >
         <h4>{page}</h4>
         <img
           src={arrow}

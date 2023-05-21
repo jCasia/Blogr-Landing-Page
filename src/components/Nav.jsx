@@ -28,7 +28,11 @@ const Nav = () => {
           <ButtonPrimary label='Sign Up' customClass={styles.signbtn} />
         </div>
         {/* mobile */}
-        <button className={styles.mobilebtn} onClick={toggleSidebar}>
+        <button
+          className={styles.mobilebtn}
+          onClick={toggleSidebar}
+          type='button'
+        >
           {isSidebarOpen ? (
             <img src={close} alt='button' aria-label='button' />
           ) : (
